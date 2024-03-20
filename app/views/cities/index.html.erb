@@ -1,0 +1,11 @@
+<h1>Your Cities</h1>
+
+<div class="cities-container">
+ <% @cities.each do |city| %>
+    <div class="city-card">
+      <div class="city-img"><%= image_tag url_for(city.photo) if city.photo.attached? %></div>
+      <div class="city-name"><h2><%= city.name %></h2></div>
+      <div class="city-info"><p><%= city.info %></p></div>
+    </div>
+ <% end %>
+</div>

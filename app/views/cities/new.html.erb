@@ -1,0 +1,22 @@
+<h1>Add New City</h1>
+<%= form_with(model: @city, url: add_city_path, local: true) do |form| %>
+   <div>
+    <%= form.label :name %>
+    <%= form.text_field :name, class:"payment_field"%>
+   </div>
+
+   <div>
+    <%= form.label :info %>
+    <%= form.text_field :info, class:"payment_field"%>
+   </div>
+
+   <div>
+    <%= form.label :photo %>
+    <%= form.file_field :photo, class: 'form-control-file' %>
+   </div>
+
+   <div>
+    <%= form.submit "Add City", class:"btn btn-success"%>
+   </div>
+  <div><%= link_to "Back", root_path, class: "btn btn-dark" %></div>
+<% end %>
